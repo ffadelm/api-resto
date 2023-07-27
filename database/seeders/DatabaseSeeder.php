@@ -4,8 +4,10 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\BestProducts;
 use App\Models\Products;
+use App\Models\Keranjangs;
+use App\Models\BestProducts;
+use App\Models\Pesanans;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,5 +19,7 @@ class DatabaseSeeder extends Seeder
     {
         BestProducts::factory(3)->create();
         Products::factory(10)->create();
+        Keranjangs::factory(5)->create();
+        Pesanans::factory(5)->create();
     }
 }

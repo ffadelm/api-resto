@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\pesanans;
 use App\Http\Requests\StorepesanansRequest;
 use App\Http\Requests\UpdatepesanansRequest;
+use App\Http\Resources\PesanansResource;
 
 class PesanansController extends Controller
 {
@@ -13,7 +14,8 @@ class PesanansController extends Controller
      */
     public function index()
     {
-        //
+        $pesanan = pesanans::all();
+        return PesanansResource::collection($pesanan);
     }
 
     /**

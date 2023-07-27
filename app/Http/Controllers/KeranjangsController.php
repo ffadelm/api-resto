@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\keranjangs;
 use App\Http\Requests\StorekeranjangsRequest;
 use App\Http\Requests\UpdatekeranjangsRequest;
+use App\Http\Resources\KeranjangsResource;
 
 class KeranjangsController extends Controller
 {
@@ -13,7 +14,8 @@ class KeranjangsController extends Controller
      */
     public function index()
     {
-        //
+        $keranjang = keranjangs::all();
+        return KeranjangsResource::collection($keranjang);
     }
 
     /**

@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class pesanans extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+
+    public function keranjangs()
+    {
+        return $this->belongsTo(Keranjangs::class);
+    }
 }

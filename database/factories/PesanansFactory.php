@@ -17,7 +17,9 @@ class PesanansFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'nama' => $this->faker->name,
+            'noMeja' => $this->faker->randomNumber(2),
+            'keranjangs_id' => mt_rand(1, 5)
         ];
     }
 }

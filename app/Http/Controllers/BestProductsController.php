@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BestProducts;
 use App\Http\Requests\StoreBestProductsRequest;
 use App\Http\Requests\UpdateBestProductsRequest;
+use App\Http\Resources\BestProductsResource;
 
 class BestProductsController extends Controller
 {
@@ -13,7 +14,8 @@ class BestProductsController extends Controller
      */
     public function index()
     {
-        //
+        $BestProducts = BestProducts::all();
+        return BestProductsResource::collection($BestProducts);
     }
 
     /**
